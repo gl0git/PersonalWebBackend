@@ -30,9 +30,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 app.post('/weblogs', (req, res, next) => {
-  console.log(req.body.title)
-  console.log(req.body.message)
-  console.log(req.body.date)
+  if (req.body.token != '$OK$#JTNKGOO!IRMKF)!J.#K!OJ$%NT!%N!_eirjnowkgehgbnEL!#34561313EJKMF') {
+    res.status(403).send()
+  }
   const log = new Log({
     title: req.body.title,
     message: req.body.message,
