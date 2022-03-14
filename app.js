@@ -30,7 +30,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 app.post('/weblogs', (req, res, next) => {
-  if (req.body.token != '$OK$#JTNKGOO!IRMKF)!J.#K!OJ$%NT!%N!_eirjnowkgehgbnEL!#34561313EJKMF') {
+  if (req.body.token != 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTWljYWgiLCJwYXNzd29yZCI6Ik1pY2FoT21vbmRpOTExJCIsImlhdCI6MTY0NzIyMjEwOH0.ho55DQrYLLFer1akbtmfCmLXCDTY3BFLA9S7J_rXOxM') {
     res.status(403).send()
   }
   const log = new Log({
